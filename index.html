@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>hypernumbernet</title>
+  <meta name="description" content="hypernumbernet のホームページ" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #141a2e;
+      --text: #e8ecf7;
+      --muted: #9aa6c4;
+      --accent: #7dd3fc;
+      --accent-2: #c4b5fd;
+      --line: rgba(255,255,255,.08);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "IBM Plex Sans JP", "IBM Plex Sans", system-ui, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(125,211,252,.16), transparent 50%),
+        radial-gradient(900px 500px at 100% 0%, rgba(196,181,253,.14), transparent 45%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 64px 24px 80px; }
+    header h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      letter-spacing: .02em;
+      margin: 0 0 8px;
+    }
+    header p { color: var(--muted); margin: 0 0 40px; }
+    .badge {
+      display: inline-block;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--accent);
+      font-size: .8rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    section { margin: 36px 0; }
+    h2 {
+      font-size: 1.1rem;
+      color: var(--accent-2);
+      margin: 0 0 14px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 14px;
+    }
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px 18px;
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    a.card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(125,211,252,.45);
+    }
+    a.card strong { display: block; margin-bottom: 6px; }
+    a.card span { color: var(--muted); font-size: .92rem; }
+    footer {
+      margin-top: 56px;
+      color: var(--muted);
+      font-size: .9rem;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="badge">GitHub Pages</div>
+      <h1>hypernumbernet</h1>
+      <p>日本在住。シミュレーション、数理、Rust / C++ / Web のプロジェクトを公開しています。</p>
+    </header>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="grid">
+        <a class="card" href="https://github.com/hypernumbernet/Aetheria-Venus-Expansion">
+          <strong>Aetheria: Venus Expansion</strong>
+          <span>金星の浮遊大陸を拡張するシミュレーションゲームの設計資料。</span>
+        </a>
+        <a class="card" href="https://github.com/hypernumbernet/DstDiophantine">
+          <strong>DstDiophantine</strong>
+          <span>DST を用いたディオファントス問題の Lean 証明。</span>
+        </a>
+        <a class="card" href="https://github.com/hypernumbernet/blackhole-simulator">
+          <strong>blackhole-simulator</strong>
+          <span>N体重力シミュレーション。</span>
+        </a>
+        <a class="card" href="https://github.com/hypernumbernet/RMeter">
+          <strong>RMeter</strong>
+          <span>JMeter の Rust 再実装。</span>
+        </a>
+        <a class="card" href="https://github.com/hypernumbernet/DomShort">
+          <strong>DomShort</strong>
+          <span>軽量な vanilla JavaScript ライブラリ。</span>
+        </a>
+        <a class="card" href="https://github.com/hypernumbernet/JSPassword">
+          <strong>JSPassword</strong>
+          <span>JavaScript のパスワードジェネレータ。</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      ソース: <a href="https://github.com/hypernumbernet/hypernumbernet.github.io">hypernumbernet.github.io</a>
+      · プロフィール: <a href="https://github.com/hypernumbernet">github.com/hypernumbernet</a>
+    </footer>
+  </div>
+</body>
+</html>
